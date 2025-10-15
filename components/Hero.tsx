@@ -87,33 +87,31 @@ const Hero = () => {
 
       {/* Logo */}
       <motion.div 
-        className="absolute top-8 left-8 z-50"
+        className="absolute top-4 sm:top-8 left-4 sm:left-8 z-50"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <h3 className="text-2xl font-bold">Adnan's Portfolio</h3>
+        <h3 className="text-xl sm:text-2xl font-bold">Adnan's Portfolio</h3>
       </motion.div>
 
       {/* Contact Button */}
       <motion.div 
-        className="absolute top-8 right-8 z-50"
+        className="absolute top-4 sm:top-8 right-4 sm:right-8 z-50"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <button className="px-8 py-4 bg-[#1c1c1c] text-white rounded-full text-sm hover:bg-[#2c2c2c] transition-all">
-          Let's work togather
-        </button>
+        
       </motion.div>
 
       {/* Main Content */}
       <div className="relative w-full h-screen flex flex-col items-center justify-center">
         {/* Text and Image Container */}
-        <div className="relative w-full max-w-[1200px] h-[600px] flex items-center justify-center">
+        <div className="relative w-full max-w-[1200px] h-[600px] flex items-center justify-center px-4 sm:px-8">
           {/* Large Text */}
           <motion.div 
-            className="absolute z-20 text-center"
+            className="absolute z-20 text-center w-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
@@ -125,7 +123,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="text-[180px] font-bold leading-[0.85] tracking-[-0.02em]"
+                className="text-[40px] sm:text-[80px] md:text-[120px] lg:text-[180px] font-bold leading-[0.85] tracking-[-0.02em]"
               >
                 {titles[currentText].top}
                 <br />
@@ -136,7 +134,7 @@ const Hero = () => {
 
           {/* Image */}
           <motion.div 
-            className="absolute w-[500px] h-[600px]"
+            className="absolute w-[280px] sm:w-[350px] md:w-[400px] lg:w-[500px] h-[400px] sm:h-[500px] md:h-[550px] lg:h-[600px]"
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
@@ -147,7 +145,7 @@ const Hero = () => {
               fill
               className="object-cover object-center"
               priority
-              sizes="500px"
+              sizes="(max-width: 640px) 280px, (max-width: 768px) 350px, (max-width: 1024px) 400px, 500px"
             />
           </motion.div>
         </div>
