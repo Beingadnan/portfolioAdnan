@@ -57,19 +57,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-black py-20 px-4 md:px-8">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0A0A0A] to-black" />
-        <div 
-          className="absolute inset-0 opacity-30" 
-          style={{
-            backgroundImage: 'radial-gradient(circle at 50% 50%, #3B82F6 0%, transparent 50%)',
-            filter: 'blur(100px)'
-          }}
-        />
-      </div>
-
+    <section className="relative min-h-screen py-20 px-4 md:px-8">
       <div className="relative max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -79,7 +67,7 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-4">Get In Touch</h2>
+          <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">Get In Touch</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? Feel free to reach out!
           </p>
@@ -103,31 +91,34 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="space-y-4">
-              <a 
-                href="mailto:your.email@example.com"
-                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+              <motion.a 
+                href="mailto:beingadnankhan678@gmail.com"
+                className="flex items-center gap-3 text-gray-400 hover:text-cyan-400 transition-colors"
+                whileHover={{ x: 5 }}
               >
-                <FiMail size={20} />
+                <FiMail size={20} className="text-cyan-400" />
                 <span>beingadnankhan678@gmail.com</span>
-              </a>
-              <a 
+              </motion.a>
+              <motion.a 
                 href="https://github.com/Beingadnan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-gray-400 hover:text-purple-400 transition-colors"
+                whileHover={{ x: 5 }}
               >
-                <FiGithub size={20} />
+                <FiGithub size={20} className="text-purple-400" />
                 <span>github.com/Beingadnan</span>
-              </a>
-              <a 
+              </motion.a>
+              <motion.a 
                 href="https://www.linkedin.com/in/adnan-khan-901324207/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-gray-400 hover:text-pink-400 transition-colors"
+                whileHover={{ x: 5 }}
               >
-                <FiLinkedin size={20} />
+                <FiLinkedin size={20} className="text-pink-400" />
                 <span>linkedin.com/in/adnan-khan</span>
-              </a>
+              </motion.a>
             </div>
           </motion.div>
 
@@ -150,7 +141,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-white backdrop-blur-sm"
+                  className="w-full px-4 py-3 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-cyan-400/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-colors text-white backdrop-blur-sm"
                   placeholder="Your name"
                 />
               </div>
@@ -166,7 +157,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-white backdrop-blur-sm"
+                  className="w-full px-4 py-3 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-cyan-400/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-colors text-white backdrop-blur-sm"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -182,7 +173,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-white backdrop-blur-sm resize-none"
+                  className="w-full px-4 py-3 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-cyan-400/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-colors text-white backdrop-blur-sm resize-none"
                   placeholder="Your message..."
                 />
               </div>
@@ -194,8 +185,8 @@ const Contact = () => {
                   className={`w-full px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed
                     ${submitStatus === 'error' ? 'bg-red-600 hover:bg-red-700 focus:ring-red-500' :
                     submitStatus === 'success' ? 'bg-green-600 hover:bg-green-700 focus:ring-green-500' :
-                    'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500'}`}
-                  whileHover={{ scale: 1.02 }}
+                    'bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 hover:opacity-90 focus:ring-cyan-500'}`}
+                  whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(139, 92, 246, 0.5)' }}
                   whileTap={{ scale: 0.98 }}
                 >
                   {submitStatus === 'error' ? <FiAlertCircle className="animate-bounce" /> :

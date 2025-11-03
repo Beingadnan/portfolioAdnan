@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: #000000;
   color: white;
   overflow-x: hidden;
 }
@@ -63,4 +63,37 @@ h1, h2, h3, h4, h5, h6 {
 .button-hover:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Premium animations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* KPR Loader neon text */
+.kpr-loading-text {
+  font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Roboto Mono', monospace;
+  text-shadow: 0 0 8px rgba(197,255,61,0.25);
+  letter-spacing: 0.05em;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
