@@ -16,6 +16,14 @@ const Projects = () => {
     live: string;
   }> = [
     {
+      title: "StreamHub",
+      description: "A modern YouTube-like video streaming platform with futuristic black theme, featuring mini player functionality, background playback, lock screen controls, and glassmorphism effects. Built with YouTube Data API integration for real-time video content with seamless user experience.",
+      // image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2074",
+      tech: ["Next.js 16", "React 19", "TypeScript", "YouTube API", "Media Session API", "TailwindCSS"],
+      github: "https://github.com/Beingadnan/streamhub",
+      live: "https://streamhub-two.vercel.app",
+    },
+    {
       title: "GreenRide Express",
       description: "A comprehensive bus ticket booking platform that enables users to search routes, book seats, and manage their travel seamlessly. Features real-time seat availability, secure payment processing, and digital ticket generation for hassle-free bus travel.",
       // image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=2070",
